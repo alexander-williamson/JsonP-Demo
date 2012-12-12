@@ -28,7 +28,7 @@ Load up /Index/Home. This is a basic html page with a couple of existing scripts
 		</script>
 	</head>
 	
-In the <body> tag of Home/Index, there is a placeholder for the content &lt;div id="childDiv"&gt;&lt;/div&gt;. Content will be loaded into here by callbackFunctionNameA.
+In the &lt;body&gt; tag of Home/Index, there is a placeholder for the content &lt;div id="childDiv"&gt;&lt;/div&gt;. Content will be loaded into here by callbackFunctionNameA.
 	
 	<div id="childDiv"></div>
     <script src="/Child/GetChildContent/callbackFunctionNameA" type="text/javascript"></script>
