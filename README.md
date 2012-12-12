@@ -6,10 +6,19 @@ A simple example showing a single cross domain JsonP script load.
 Overview
 ========
 
-There are two Controller/View pairs:
+There are two basic static HTML Views:
 
-1.	Home
-2.	Child
+1.	Home (JsonpDemo/Views/Home/Index.cshtml)
+2.	Child (JsonpDemo/Views/Child/GetChildContent.cshtml)
+
+Json Results
+------------
+The magic happens in (JsonpDemo/Controllers/ChildController.cs) after that page is requested from \Home\Index in the <script> injector.
+
+1.	/Child/GetChildContent is called with a single argument. This argument will be the scripts callback function name (e.g. callbackfunctionNameA)
+2.	We generate and convert the View to a HTML string
+3.	We Jsonify the HTML String and wrap the serialisation
+4.	We return a new json object with the callback name wrapping the Html. 
 
 In your browser, navigate to /Home/View
 
@@ -21,3 +30,4 @@ Misc
 ====
 
 Using jQuery for simple dom manipulation.
+ReturnObject is a basic object to simplify serialization.
