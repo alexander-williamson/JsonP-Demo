@@ -13,7 +13,7 @@ There are two basic static HTML Views:
 
 Json Results
 ------------
-The magic happens in (JsonpDemo/Controllers/ChildController.cs) after that page is requested from \Home\Index in the <script> injector.
+The magic happens in (JsonpDemo/Controllers/ChildController.cs) after that page is requested from \Home\Index in the &lt;script&gt; injector.
 
 1.	/Child/GetChildContent is called with a single argument. This argument will be the scripts callback function name (e.g. callbackfunctionNameA)
 2.	We generate and convert the View to a HTML string
@@ -24,7 +24,7 @@ In your browser, navigate to /Home/View
 
 1.	A javascript function has been declared called callbackFunctionNameA. It takes a single json argument and expects that json object to have a .Html html object.
 2.	When the /Child/GetChildContent/callbackfunctionNameA is loaded it calls callbackfunctionNameA. The parameter callbackFunctionNameA is the name of the callback function. 
-3.	callbackfunctionNameA replaces the HTML content in <div id="childDiv"></div>
+3.	callbackfunctionNameA replaces the HTML content in &lt;div id="childDiv"&gt;&lt;/div&gt;
 
 Misc
 ====
