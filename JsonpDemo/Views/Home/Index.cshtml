@@ -1,0 +1,24 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>JsonP Demo : Home Page</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.8.0.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function callbackFunctionNameA(data) {
+            $("#childDiv").html(data.Html);
+        }
+    </script>
+</head>
+<body>
+    <section>
+        <h1>JsonP Demo - Cross Site Script Injection</h1>
+        <p>This is the index page. Below is a child div called #childDiv. Content will get injected into there.</p>
+        <div id="childDiv"></div>
+        <script src="/Child/GetChildContent/callbackFunctionNameA" type="text/javascript"></script>
+    </section>
+</body>
+</html>
